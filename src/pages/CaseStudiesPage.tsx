@@ -1,4 +1,5 @@
 import { useSearchParams } from "react-router-dom";
+import { EmptyState } from "../components/ui/EmptyState";
 import { CaseStudyCard } from "../features/case-studies/components/CaseStudyCard";
 import { TagFilter } from "../features/case-studies/components/TagFilter";
 import { getAllCaseStudies } from "../features/case-studies/repository";
