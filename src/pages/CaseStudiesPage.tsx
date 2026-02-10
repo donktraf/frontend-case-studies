@@ -1,8 +1,15 @@
-import { getAllCaseStudies } from "../features/case-studies/repository";
+import { useSearchParams } from "react-router-dom";
 import { CaseStudyCard } from "../features/case-studies/components/CaseStudyCard";
+import { TagFilter } from "../features/case-studies/components/TagFilter";
+import { getAllCaseStudies } from "../features/case-studies/repository";
+import { filterCaseStudiesByTag } from "../features/case-studies/utils";
 
 export function CaseStudiesPage() {
-  const caseStudies = getAllCaseStudies();
+  const [searchParams] = useSearchParams();
+  const tag = searchParams.get("tag") ?? undefined;
+
+  const all = getAllCaseStudies();
+  const filtered = filterCaseStudiesByTag(all, tag);
 
   return (
     <section>
@@ -13,7 +20,11 @@ export function CaseStudiesPage() {
         </p>
       </header>
 
-      {caseStudies.length === 0 ? (
+      <div style={{ marginBottom: 16 }}>
+        <TagFilter />
+      </div>
+
+      {all.length === 0 ? (
         <div
           style={{
             border: "1px dashed #D1D5DB",
@@ -24,6 +35,17 @@ export function CaseStudiesPage() {
         >
           No case studies yet.
         </div>
+      ) : filtered.length === 0 ? (
+        <div
+          style={{
+            border: "1px dashed #D1D5DB",
+            borderRadius: 12,
+            padding: 16,
+            color: "#374151",
+          }}
+        >
+          No results{tag ? ` for tag "${tag}".` : "."}
+        </div>
       ) : (
         <div
           style={{
@@ -32,7 +54,7 @@ export function CaseStudiesPage() {
             gap: 16,
           }}
         >
-          {caseStudies.map((cs) => (
+          {filtered.map((cs) => (
             <CaseStudyCard key={cs.slug} caseStudy={cs} />
           ))}
         </div>
