@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "routing-layout-foundation",
+    "title": "Routing & Layout Foundation",
+    "summary": "Set up a clean app shell with routing, navigation, and predictable UI structure.",
+    "tags": ["react", "typescript", "architecture", "ux"],
+    "publishedAt": "2026-02-10",
+    "content": "# Goal\nBuild a reliable foundation for a frontend app.\n\n## Decisions\n- React Router for client-side routing\n- A layout shell that hosts navigation and an Outlet\n\n## Learnings\n- Keep pages thin\n- Move app-shell concerns into src/app\n"
+  },
+  {
+    "slug": "content-model-local-repository",
+    "title": "Content Model & Local Repository",
+    "summary": "Model case studies in a typed way and expose a repository API for later backend integration.",
+    "tags": ["typescript", "architecture"],
+    "publishedAt": "2026-02-10",
+    "content": "# Goal\nRepresent content as data with strong typing.\n\n## Approach\n- JSON as a simple, versioned content store\n- Repository functions (getAll/getBySlug)\n\n## Next\nSwap JSON for API/CMS without changing the UI layer.\n"
+  },
+  {
+    "slug": "form-validation-patterns",
+    "title": "Form Validation Patterns (Planned)",
+    "summary": "Prepare a robust, accessible pattern for form validation and UI states.",
+    "tags": ["ux", "testing", "typescript"],
+    "publishedAt": "2026-02-10",
+    "content": "# Goal\nImplement accessible form validation.\n\n## Planned\n- React Hook Form + Zod\n- Clear error messages and focus management\n\n## Why it matters\nForms are a common source of UX and quality issues.\n"
+  }
+]
