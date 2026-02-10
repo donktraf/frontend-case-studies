@@ -3,6 +3,7 @@
 A modern, minimal React application showcasing frontend architecture, code quality, and UX best practices.
 
 ## Tech Stack
+
 - React
 - TypeScript
 - Vite
@@ -12,3 +13,4 @@ A modern, minimal React application showcasing frontend architecture, code quali
 ```bash
 npm install
 npm run dev
+```

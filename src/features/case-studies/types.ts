@@ -1,10 +1,4 @@
-export type CaseStudyTag =
-  | "react"
-  | "typescript"
-  | "testing"
-  | "architecture"
-  | "ux"
-  | "api";
+export type CaseStudyTag = "react" | "typescript" | "testing" | "architecture" | "ux" | "api";
 
 export type CaseStudy = {
   slug: string;

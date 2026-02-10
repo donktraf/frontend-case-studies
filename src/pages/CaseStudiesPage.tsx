@@ -26,27 +26,9 @@ export function CaseStudiesPage() {
       </div>
 
       {all.length === 0 ? (
-        <div
-          style={{
-            border: "1px dashed #D1D5DB",
-            borderRadius: 12,
-            padding: 16,
-            color: "#374151",
-          }}
-        >
-          No case studies yet.
-        </div>
+     <EmptyState message="No case studies yet." />
       ) : filtered.length === 0 ? (
-        <div
-          style={{
-            border: "1px dashed #D1D5DB",
-            borderRadius: 12,
-            padding: 16,
-            color: "#374151",
-          }}
-        >
-          No results{tag ? ` for tag "${tag}".` : "."}
-        </div>
+     <EmptyState message={tag ? `No results for tag "${tag}".` : "No results."} />
       ) : (
         <div
           style={{
