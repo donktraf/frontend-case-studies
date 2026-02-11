@@ -20,7 +20,7 @@ export function TagFilter() {
     <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} aria-label="Tag filter">
       <button
         type="button"
-        onClick={() => setTag(null)}
+        onClick={() => {return setTag(null)}}
         style={{
           padding: "6px 10px",
           borderRadius: 999,
@@ -38,7 +38,7 @@ export function TagFilter() {
           <button
             key={tag}
             type="button"
-            onClick={() => setTag(tag)}
+            onClick={() => {return setTag(tag)}}
             style={{
               padding: "6px 10px",
               borderRadius: 999,

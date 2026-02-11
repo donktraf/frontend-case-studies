@@ -37,7 +37,7 @@ export function ContactForm() {
       setState("submitting");
 
       // Mock request (simulate latency)
-      await new Promise((r) => setTimeout(r, 700));
+      await new Promise((r) => {return setTimeout(r, 700)});
 
       // In a real app, you'd POST values to an API endpoint here.
       console.log("Contact submit:", values);

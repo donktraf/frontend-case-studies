@@ -37,9 +37,9 @@ export function CaseStudiesPage() {
             gap: 16,
           }}
         >
-          {filtered.map((cs) => (
+          {filtered.map((cs) => {return (
             <CaseStudyCard key={cs.slug} caseStudy={cs} />
-          ))}
+          )})}
         </div>
       )}
     </section>

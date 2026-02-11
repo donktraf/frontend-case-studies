@@ -10,11 +10,11 @@ function AppNavLink({ to, label }: { to: string; label: string }) {
   return (
     <NavLink
       to={to}
-      style={({ isActive }) => ({
+      style={({ isActive }) => {return {
         ...linkBase,
         color: isActive ? "#111827" : "#374151",
         background: isActive ? "#E5E7EB" : "transparent",
-      })}
+      }}}
     >
       {label}
     </NavLink>

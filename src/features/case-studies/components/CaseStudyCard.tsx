@@ -19,7 +19,7 @@ export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
       </header>
 
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }} aria-label="Tags">
-        {caseStudy.tags.map((tag) => (
+        {caseStudy.tags.map((tag) => {return (
           <span
             key={tag}
             style={{
@@ -33,7 +33,7 @@ export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
           >
             {tag}
           </span>
-        ))}
+        )})}
       </div>
 
       <div style={{ marginTop: 6, display: "flex", justifyContent: "space-between", gap: 12 }}>

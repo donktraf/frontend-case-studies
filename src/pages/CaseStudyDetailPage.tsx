@@ -30,7 +30,7 @@ export function CaseStudyDetailPage() {
         <p style={{ color: "#374151", margin: "0 0 10px" }}>{caseStudy.summary}</p>
 
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
-          {caseStudy.tags.map((tag) => (
+          {caseStudy.tags.map((tag) => {return (
             <span
               key={tag}
               style={{
@@ -44,7 +44,7 @@ export function CaseStudyDetailPage() {
             >
               {tag}
             </span>
-          ))}
+          )})}
         </div>
 
         <time style={{ fontSize: 12, color: "#6B7280" }}>{caseStudy.publishedAt}</time>

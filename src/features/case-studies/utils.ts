@@ -7,5 +7,5 @@ export function isCaseStudyTag(value: string): value is CaseStudyTag {
 export function filterCaseStudiesByTag(caseStudies: CaseStudy[], tag?: string): CaseStudy[] {
   if (!tag) return caseStudies;
   if (!isCaseStudyTag(tag)) return [];
-  return caseStudies.filter((cs) => cs.tags.includes(tag));
+  return caseStudies.filter((cs) => {return cs.tags.includes(tag)});
 }

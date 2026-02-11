@@ -20,7 +20,7 @@ function load(): CaseStudy[] {
   const parsed = rawCaseStudies.filter(assertCaseStudy);
 
   // Sort newest first (string YYYY-MM-DD sorts lexicographically)
-  parsed.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+  parsed.sort((a, b) => {return (a.publishedAt < b.publishedAt ? 1 : -1)});
   return parsed;
 }
 
@@ -29,5 +29,5 @@ export function getAllCaseStudies(): CaseStudy[] {
 }
 
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
-  return load().find((cs) => cs.slug === slug);
+  return load().find((cs) => {return cs.slug === slug});
 }

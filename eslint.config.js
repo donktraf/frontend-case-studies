@@ -25,6 +25,8 @@ export default [
     rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      curly: ["error", "all"],
+      "arrow-body-style": ["error", "always"],
     },
   },
 
